@@ -1,0 +1,229 @@
+/* =========================
+   GALERÍA
+========================= */
+#galeria .max-w-lg {
+  margin-inline: 0;
+}
+.gallery-grid {
+  display: grid;
+  gap: 0.9rem;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+@media (max-width: 1100px) {
+  .gallery-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 800px) {
+  .gallery-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border);
+  background: rgba(255, 255, 255, 0.03);
+  cursor: pointer;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  transition: transform var(--transition-base);
+}
+
+.gallery-item:hover img {
+  transform: scale(1.04);
+}
+
+.gallery-cap {
+  position: absolute;
+  left: 10px;
+  bottom: 10px;
+  padding: 0.35rem 0.6rem;
+  border-radius: var(--radius-pill);
+  background: rgba(11, 15, 20, 0.75);
+  border: 1px solid rgba(232, 238, 247, 0.12);
+  color: var(--color-text);
+  font-size: 0.85rem;
+}
+
+/* =========================
+   MODAL / LIGHTBOX (Galería)
+========================= */
+
+/* Overlay */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(11, 15, 20, 0.75);
+  backdrop-filter: blur(4px);
+
+  display: grid;
+  place-items: center;
+
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity var(--transition-base);
+
+  z-index: 200;
+}
+
+.modal-overlay.is-open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Modal */
+.modal {
+  background: rgba(17, 28, 43, 0.95);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+
+  width: min(720px, 94vw);
+  max-height: 88vh;
+
+  display: flex;
+  flex-direction: column;
+
+  box-shadow: var(--shadow-md);
+  position: relative;
+}
+
+/* Imagen completa, sin recorte */
+.modal-media {
+  flex: 0 0 auto;
+  padding: var(--space-sm);
+}
+
+.modal-media img {
+  width: 100%;
+  height: auto;
+  max-height: 48vh; /* 🔥 entra siempre */
+  object-fit: contain; /* 🔥 imagen completa */
+  display: block;
+}
+
+/* Contenido SIN scroll */
+.modal-content {
+  padding: var(--space-sm) var(--space-md) var(--space-md);
+}
+
+/* Specs */
+.modal-specs {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 0.4rem;
+}
+
+.modal-specs li {
+  padding-left: 1rem;
+  position: relative;
+  color: var(--color-text-muted);
+  font-size: 0.95rem;
+}
+
+.modal-specs li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: var(--color-primary);
+}
+
+/* CTA */
+#gallery-modal-cta {
+  margin-top: var(--space-sm);
+}
+
+/* Botón cerrar */
+.modal-close {
+  position: absolute;
+  top: 0.6rem;
+  right: 0.6rem;
+
+  background: rgba(11, 15, 20, 0.6);
+  border: 1px solid rgba(232, 238, 247, 0.15);
+  color: var(--color-text);
+
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-pill);
+
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+  z-index: 1;
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+  .modal {
+    width: 94vw;
+    max-height: 92vh;
+  }
+
+  .modal-media img {
+    max-height: 40vh; /* 🔥 mobile seguro */
+  }
+
+  .modal-specs li {
+    font-size: 0.9rem;
+  }
+}
+
+/* =========================
+   FILTROS GALERÍA
+========================= */
+
+.gallery-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: var(--space-md);
+}
+
+.filter-btn {
+  padding: 0.45rem 0.8rem;
+  border-radius: var(--radius-pill);
+  border: 1px solid var(--color-border);
+  background: rgba(255, 255, 255, 0.04);
+  color: var(--color-text-muted);
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: all var(--transition-fast);
+}
+
+.filter-btn:hover {
+  color: var(--color-text);
+  border-color: rgba(232, 238, 247, 0.25);
+}
+
+.filter-btn.is-active {
+  background: var(--color-primary);
+  color: #000;
+  border-color: transparent;
+}
+
+/* Animación de filtrado */
+.gallery-item {
+  transition:
+    opacity 0.25s ease,
+    transform 0.25s ease;
+}
+
+.gallery-item.is-hidden {
+  opacity: 0;
+  transform: scale(0.96);
+  pointer-events: none;
+}

@@ -1,0 +1,97 @@
+/* =========================
+   HERO (imagen de fondo)
+========================= */
+
+.hero {
+  position: relative;
+}
+
+/* Variante con fondo */
+.hero--bg {
+  position: relative;
+  display: flex;
+  align-items: center;
+
+  /* para que se vea algo de la sección de abajo */
+  min-height: 78vh;
+  max-height: 760px;
+
+  padding-block: clamp(3rem, 7vh, 5rem);
+
+  /* Imagen de fondo */
+  background-image: url("../assets/hero.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 70% 55%;
+}
+
+/* Overlay: legibilidad + fusión con la sección siguiente */
+.hero--bg::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(11, 15, 20, 0.92) 0%,
+      rgba(11, 15, 20, 0.7) 45%,
+      rgba(11, 15, 20, 0.3) 100%
+    ),
+    linear-gradient(to bottom, rgba(11, 15, 20, 0) 60%, var(--color-bg) 100%);
+}
+
+/* Contenido por encima del overlay */
+.hero__content {
+  position: relative;
+  z-index: 1;
+}
+
+/* CTA */
+.hero-actions {
+  gap: 0.75rem;
+}
+
+/* Texto */
+.hero-subtitle strong {
+  color: var(--color-text);
+}
+
+/* Evitar que max-w-lg centre el párrafo */
+.hero .max-w-lg {
+  margin-inline: 0;
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 900px) {
+  .hero--bg {
+    min-height: 72vh;
+    background-position: 60% 40%;
+  }
+
+  .hero--bg::before {
+    background: rgba(11, 15, 20, 0.78);
+  }
+}
+
+/* Degradado inferior para fundir con la siguiente sección */
+.hero--bg::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  height: 140px; /* ajustable */
+  pointer-events: none;
+
+  background: linear-gradient(
+    to bottom,
+    rgba(11, 15, 20, 0) 0%,
+    var(--color-bg) 100%
+  );
+}

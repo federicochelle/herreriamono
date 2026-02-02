@@ -1,0 +1,84 @@
+/* =========================
+   SERVICIOS / QUÉ HACEMOS
+========================= */
+
+/* Subtítulo: evita centrado por max-w-lg */
+#servicios .max-w-lg {
+  margin-inline: 0;
+}
+
+/* Card de servicio */
+.service-card {
+  transition:
+    transform var(--transition-fast),
+    border-color var(--transition-fast),
+    box-shadow var(--transition-fast);
+}
+
+/* Hover sutil industrial */
+.service-card:hover {
+  transform: translateY(-2px);
+  border-color: rgba(232, 238, 247, 0.22);
+  box-shadow: var(--shadow-md);
+}
+
+/* =========================
+   ICONOS SVG
+========================= */
+
+.service-icon {
+  width: 52px;
+  height: 52px;
+  color: var(--color-primary);
+}
+
+/* Cambio de color al hover */
+.service-card:hover .service-icon {
+  color: var(--color-text);
+}
+
+/* =========================
+   TITULOS Y TEXTO
+========================= */
+
+#servicios h3 {
+  margin-top: var(--space-xs);
+}
+
+/* =========================
+   CTA (opcional)
+========================= */
+
+.services-cta {
+  display: flex;
+  justify-content: flex-start;
+}
+
+/* =========================
+   SERVICIOS: 2 columnas en mobile
+========================= */
+
+@media (max-width: 640px) {
+  #servicios .grid-3 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: var(--space-sm);
+  }
+
+  /* Compactar un poco las cards para que respiren */
+  #servicios .card {
+    padding: var(--space-sm);
+  }
+
+  /* Icono un poco más chico */
+  #servicios .service-icon {
+    width: 28px;
+    height: 28px;
+  }
+}
+
+/* Si la pantalla es MUY angosta, vuelve a 1 columna */
+@media (max-width: 360px) {
+  #servicios .grid-3 {
+    grid-template-columns: 1fr;
+  }
+}

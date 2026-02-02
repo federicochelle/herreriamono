@@ -1,0 +1,34 @@
+/* =========================
+   1. BASE (reset + variables)
+========================= */
+@import "base.css";
+
+/* =========================
+   2. LAYOUT (estructura)
+========================= */
+@import "layout.css";
+
+/* =========================
+   3. COMPONENTS (navbar, botones, cards)
+========================= */
+@import "components.css";
+@import "navbar.css";
+
+/* =========================
+   4. PAGES / SECTIONS (hero, landing)
+========================= */
+@import "hero.css";
+@import "servicios.css";
+@import "repertorio.css";
+@import "galeria.css";
+@import "proceso.css";
+@import "contacto.css";
+@import "footer.css";
+/* =========================
+   5. OVERRIDES / FIXES (siempre al final)
+========================= */
+
+/* Ajuste: en oscuro, párrafos deben ser legibles */
+p {
+  color: var(--color-text-muted);
+}
