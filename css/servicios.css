@@ -7,34 +7,72 @@
   margin-inline: 0;
 }
 
-/* Card de servicio */
-.service-card {
+/* Grid: mobile-first (1 columna por defecto) */
+#servicios .grid-3 {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-sm);
+}
+
+/* Tablet: 2 columnas */
+@media (min-width: 640px) {
+  #servicios .grid-3 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* Desktop: 3 columnas */
+@media (min-width: 1024px) {
+  #servicios .grid-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+/* =========================
+   CARD DE SERVICIO
+========================= */
+
+#servicios .service-card {
+  padding: var(--space-sm);
   transition:
     transform var(--transition-fast),
     border-color var(--transition-fast),
     box-shadow var(--transition-fast);
 }
 
-/* Hover sutil industrial */
-.service-card:hover {
-  transform: translateY(-2px);
-  border-color: rgba(232, 238, 247, 0.22);
-  box-shadow: var(--shadow-md);
+/* Hover sutil industrial (solo en dispositivos con hover real) */
+@media (hover: hover) and (pointer: fine) {
+  #servicios .service-card:hover {
+    transform: translateY(-2px);
+    border-color: rgba(232, 238, 247, 0.22);
+    box-shadow: var(--shadow-md);
+  }
 }
 
 /* =========================
    ICONOS SVG
 ========================= */
 
-.service-icon {
-  width: 52px;
-  height: 52px;
+#servicios .service-icon {
+  width: 28px;
+  height: 28px;
   color: var(--color-primary);
+  margin-bottom: var(--space-xs);
 }
 
-/* Cambio de color al hover */
-.service-card:hover .service-icon {
-  color: var(--color-text);
+/* En pantallas más grandes, icono más grande */
+@media (min-width: 640px) {
+  #servicios .service-icon {
+    width: 52px;
+    height: 52px;
+  }
+}
+
+/* Cambio de color al hover (solo donde hay hover real) */
+@media (hover: hover) and (pointer: fine) {
+  #servicios .service-card:hover .service-icon {
+    color: var(--color-text);
+  }
 }
 
 /* =========================
@@ -43,42 +81,15 @@
 
 #servicios h3 {
   margin-top: var(--space-xs);
+  overflow-wrap: break-word;
+  hyphens: auto;
 }
 
 /* =========================
    CTA (opcional)
 ========================= */
 
-.services-cta {
+#servicios .services-cta {
   display: flex;
   justify-content: flex-start;
-}
-
-/* =========================
-   SERVICIOS: 2 columnas en mobile
-========================= */
-
-@media (max-width: 640px) {
-  #servicios .grid-3 {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: var(--space-sm);
-  }
-
-  /* Compactar un poco las cards para que respiren */
-  #servicios .card {
-    padding: var(--space-sm);
-  }
-
-  /* Icono un poco más chico */
-  #servicios .service-icon {
-    width: 28px;
-    height: 28px;
-  }
-}
-
-/* Si la pantalla es MUY angosta, vuelve a 1 columna */
-@media (max-width: 360px) {
-  #servicios .grid-3 {
-    grid-template-columns: 1fr;
-  }
 }
