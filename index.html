@@ -1,89 +1,66 @@
 <!doctype html>
-<html lang="es">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <title>Herrería Mono García | Rejas, portones y muebles a medida</title>
-    <meta
-      name="description"
-      content="Herrería Mono García: rejas, portones, estructuras y muebles metálicos a medida. Catálogo de trabajos y presupuesto por WhatsApp."
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
     />
-
-    <meta property="og:title" content="Herrería Mono García" />
-    <meta
-      property="og:description"
-      content="Rejas, portones, estructuras y muebles a medida. Pedí presupuesto por WhatsApp."
-    />
-    <meta property="og:type" content="website" />
-    <!-- Open Graph -->
-    <meta property="og:type" content="website" />
-    <meta property="og:locale" content="es_UY" />
-
-    <meta
-      property="og:title"
-      content="Herrería Mono García | Rejas, portones y trabajos en hierro"
-    />
-    <meta
-      property="og:description"
-      content="Rejas, portones, estructuras y muebles en hierro a medida. Trabajo prolijo, fuerte y duradero."
-    />
-
-    <meta
-      property="og:url"
-      content="https://federicochelle.github.io/herreriamono/"
-    />
-    <meta property="og:site_name" content="Herrería Mono García" />
-
-    <meta
-      property="og:image"
-      content="https://federicochelle.github.io/herreriamono/assets/hero.jpg"
-    />
-    <meta property="og:image:width" content="1200" />
-    <meta property="og:image:height" content="630" />
-    <meta
-      property="og:image:alt"
-      content="Herrería Mono García - trabajos en hierro a medida"
-    />
-
     <link rel="stylesheet" href="css/main.css" />
   </head>
-
   <body>
     <!-- Header -->
-    <header class="site-header" id="top">
+    <header class="site-header">
       <div class="container flex flex-between flex-wrap header-inner">
         <!-- Brand -->
-        <a class="brand" href="#inicio" aria-label="Ir al inicio">
-          <!-- Logo (monito) -->
+        <a
+          class="brand brand-logo-only brand-with-text"
+          href="#top"
+          aria-label="Herrería Mono García"
+        >
           <img
             class="brand-logo"
             src="assets/logo.png"
-            alt="Logo Herrería Mono García"
+            alt="Herrería Mono García"
             width="44"
             height="44"
             loading="eager"
           />
 
-          <!-- Texto al lado -->
           <span class="brand-text">
-            <span class="brand-kicker">Herrería</span>
-            <span class="brand-name">Mono García</span>
+            <small class="brand-kicker">HERRERÍA</small>
+            <strong class="brand-name">Mono García</strong>
           </span>
         </a>
-
         <!-- Nav desktop -->
         <nav class="nav nav-desktop" aria-label="Navegación principal">
-          <a class="nav-link" href="#servicios">Servicios</a>
-          <a class="nav-link" href="#galeria">Galería</a>
-          <a class="nav-link" href="#proceso">Proceso</a>
-          <a class="nav-link" href="#contacto">Contacto</a>
+          <a class="nav-link" href="#rejas">Rejas</a>
+          <a class="nav-link" href="#portones">Portones</a>
+          <a class="nav-link" href="#estructuras">Estructuras</a>
+          <a class="nav-link" href="#muebles">Muebles</a>
 
+          <!-- CTA principal -->
           <a
             class="btn btn-primary nav-cta"
-            href="https://instagram.com/herreria_mono.garcia"
+            href="https://wa.me/598XXXXXXXX?text=Hola!%20Vi%20sus%20trabajos%20en%20la%20web%20y%20quiero%20cotizar%20un%20trabajo%20en%20hierro."
             target="_blank"
             rel="noopener"
+          >
+            Consultar por WhatsApp
+          </a>
+
+          <!-- Link secundario (Instagram) -->
+          <a
+            class="btn btn-outline"
+            href="https://www.instagram.com/TU_INSTAGRAM/"
+            target="_blank"
+            rel="noopener"
+            aria-label="Instagram de Herrería"
+            title="Instagram"
           >
             <svg
               class="btn-icon"
@@ -122,17 +99,29 @@
       <!-- Overlay (mobile) -->
       <div class="menu-overlay" data-menu-close hidden></div>
 
-      <!-- Menú mobile (dropdown) -->
+      <!-- Menú mobile -->
       <div class="mobile-menu" id="mobile-menu" hidden>
         <nav class="nav nav-mobile" aria-label="Menú móvil">
-          <a class="nav-link" href="#servicios" data-menu-close>Servicios</a>
-          <a class="nav-link" href="#galeria" data-menu-close>Galería</a>
-          <a class="nav-link" href="#proceso" data-menu-close>Proceso</a>
-          <a class="nav-link" href="#contacto" data-menu-close>Contacto</a>
+          <a class="nav-link" href="#rejas" data-menu-close>Rejas</a>
+          <a class="nav-link" href="#portones" data-menu-close>Portones</a>
+          <a class="nav-link" href="#estructuras" data-menu-close
+            >Estructuras</a
+          >
+          <a class="nav-link" href="#muebles" data-menu-close>Muebles</a>
 
           <a
             class="btn btn-primary"
-            href="https://instagram.com/herreria_mono.garcia"
+            href="https://wa.me/598XXXXXXXX?text=Hola!%20Vi%20sus%20trabajos%20en%20la%20web%20y%20quiero%20cotizar%20un%20trabajo%20en%20hierro."
+            target="_blank"
+            rel="noopener"
+            data-menu-close
+          >
+            Consultar por WhatsApp
+          </a>
+
+          <a
+            class="btn btn-outline"
+            href="https://www.instagram.com/TU_INSTAGRAM/"
             target="_blank"
             rel="noopener"
             data-menu-close
@@ -160,470 +149,339 @@
         </nav>
       </div>
     </header>
+    <main id="top" class="page">
+      <!-- =========================
+       HERO
+  ========================== -->
+      <section class="hero">
+        <div class="hero-media">
+          <!-- Podés usar video o imagen -->
+          <img src="assets/hero.jpg" alt="Trabajo en hierro a medida" />
+        </div>
 
-    <main id="inicio">
-      <!-- Hero -->
-      <section class="section hero hero--bg" id="inicio">
-        <div class="container hero__content stack-md">
+        <div class="container hero-content stack-md max-w-lg">
           <h1>
-            Soluciones hechas <br />
-            para durar
+            Hierro a medida.<br />
+            Fuerte y prolijo.
           </h1>
 
-          <p class="hero-subtitle max-w-lg">
-            Rejas, portones, estructuras y muebles en hierro
-            <strong>a medida</strong>.
+          <p class="text-muted">
+            Rejas, portones, estructuras y muebles en hierro hechos a medida.
           </p>
 
-          <div class="flex flex-wrap hero-actions">
+          <div class="flex flex-wrap gap-sm">
             <a
+              href="https://wa.me/598XXXXXXXX?text=Hola!%20Quiero%20cotizar%20un%20trabajo%20en%20hierro."
               class="btn btn-primary"
-              href="https://wa.me/59895181160?text=Hola%20Herrer%C3%ADa%20Mono%20Garc%C3%ADa%2C%20quiero%20pedir%20presupuesto."
               target="_blank"
               rel="noopener"
             >
-              Pedir presupuesto
+              Consultar por WhatsApp
             </a>
 
-            <a class="btn btn-outline" href="#galeria">Ver trabajos</a>
+            <a href="#trabajos" class="btn btn-outline"> Ver trabajos </a>
           </div>
         </div>
       </section>
 
-      <!-- Servicios -->
-      <section id="servicios" class="section">
+      <!-- =========================
+       CATEGORÍAS
+  ========================== -->
+      <section class="section section--divided" id="categorias">
         <div class="container stack-md">
           <header class="stack-xs">
-            <h2>Qué hacemos</h2>
-            <p class="text-muted max-w-lg">
-              Soluciones en hierro para seguridad, acceso y mobiliario con
-              estilo industrial.
+            <h2>Categorias</h2>
+            <p class="text-muted max-w-md">
+              Algunos de nuestros trabajos realizados a medida.
             </p>
           </header>
+          <div class="container grid grid-4">
+            <!-- Rejas -->
+            <article class="card category-card">
+              <img src="assets/reja.jpg" alt="Rejas de hierro" />
+              <h3 class="card-title">Rejas</h3>
+              <div class="card-action">
+                <a href="#rejas" class="btn btn-outline btn-sm">Ver catálogo</a>
+              </div>
+            </article>
+
+            <!-- Portones -->
+            <article class="card category-card">
+              <img src="assets/porton.jpg" alt="Portones de hierro" />
+              <h3 class="card-title">Portones</h3>
+              <div class="card-action">
+                <a href="#portones" class="btn btn-outline btn-sm"
+                  >Ver catálogo</a
+                >
+              </div>
+            </article>
+
+            <!-- Estructuras -->
+            <article class="card category-card">
+              <img src="assets/mueble.jpg" alt="Estructuras metálicas" />
+              <h3 class="card-title">Estructuras</h3>
+              <div class="card-action">
+                <a href="#estructuras" class="btn btn-outline btn-sm"
+                  >Ver catálogo</a
+                >
+              </div>
+            </article>
+
+            <!-- Muebles -->
+            <article class="card category-card">
+              <img src="assets/mueble2.jpg" alt="Muebles en hierro" />
+              <h3 class="card-title">Muebles en hierro</h3>
+              <div class="card-action">
+                <a href="#muebles" class="btn btn-outline btn-sm"
+                  >Ver catálogo</a
+                >
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- =========================
+       TRABAJOS DESTACADOS
+  ========================== -->
+      <section class="section section--divided" id="trabajos">
+        <div class="container stack-md">
+          <header class="stack-xs">
+            <h2>Trabajos destacados</h2>
+            <p class="text-muted max-w-md">
+              Algunos de nuestros trabajos realizados a medida.
+            </p>
+          </header>
+
           <div class="grid grid-3">
-            <article class="card stack-xs service-card">
-              <!-- Rejas -->
-              <a class="service-link" href="#galeria">
-                <svg
-                  class="service-icon"
-                  viewBox="0 0 24 24"
-                  aria-hidden="true"
-                >
-                  <path
-                    d="M3 3v18M9 3v18M15 3v18M21 3v18"
-                    stroke="currentColor"
-                    stroke-width="2"
-                  />
-                </svg>
-                <h3>Rejas y cerramientos</h3>
-                <p class="text-muted">
-                  Seguridad con terminación prolija y resistente.
-                </p>
-              </a>
+            <article class="card work-card">
+              <img src="assets/porton2.jpg" alt="Portón corredizo" />
+              <div class="stack-xs">
+                <h3>Portón corredizo</h3>
+                <a href="#" class="btn btn-outline btn-sm">Ver trabajo</a>
+              </div>
             </article>
 
-            <article class="card stack-xs service-card">
-              <a class="service-link" href="#galeria">
-                <!-- Portones -->
-                <svg
-                  class="service-icon"
-                  viewBox="0 0 24 24"
-                  aria-hidden="true"
-                >
-                  <rect
-                    x="3"
-                    y="4"
-                    width="14"
-                    height="16"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    fill="none"
-                  />
-                  <path d="M21 12h-4" stroke="currentColor" stroke-width="2" />
-                </svg>
-                <h3>Portones y accesos</h3>
-                <p class="text-muted">
-                  Corredizos o batientes. Preparados para automatizar.
-                </p>
-              </a>
+            <article class="card work-card">
+              <img src="assets/reja.jpg" alt="Reja de seguridad" />
+              <div class="stack-xs">
+                <h3>Reja de seguridad</h3>
+                <a href="#" class="btn btn-outline btn-sm">Ver trabajo</a>
+              </div>
             </article>
 
-            <article class="card stack-xs service-card">
-              <a class="service-link" href="#galeria">
-                <!-- Estructuras -->
-                <svg
-                  class="service-icon"
-                  viewBox="0 0 24 24"
-                  aria-hidden="true"
-                >
-                  <path
-                    d="M4 20L12 4l8 16H4z"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    fill="none"
-                  />
-                </svg>
-                <h3>Estructuras metálicas</h3>
-                <p class="text-muted">
-                  Soportes, marcos, refuerzos y trabajos de obra.
-                </p>
-              </a>
-            </article>
-
-            <article class="card stack-xs service-card">
-              <a class="service-link" href="#galeria">
-                <!-- Muebles -->
-                <svg
-                  class="service-icon"
-                  viewBox="0 0 24 24"
-                  aria-hidden="true"
-                >
-                  <rect
-                    x="4"
-                    y="6"
-                    width="16"
-                    height="6"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    fill="none"
-                  />
-                  <path
-                    d="M6 12v6M18 12v6"
-                    stroke="currentColor"
-                    stroke-width="2"
-                  />
-                </svg>
-                <h3>Muebles de hierro y madera</h3>
-                <p class="text-muted">Mesas, estantes, sillas, barras y más.</p>
-              </a>
-            </article>
-
-            <article class="card stack-xs service-card">
-              <a class="service-link" href="#galeria">
-                <!-- Arreglos -->
-                <svg
-                  class="service-icon"
-                  viewBox="0 0 24 24"
-                  aria-hidden="true"
-                >
-                  <path
-                    d="M14 2l8 8-10 10H4v-8L14 2z"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    fill="none"
-                  />
-                </svg>
-                <h3>Arreglos y mejoras</h3>
-                <p class="text-muted">
-                  Reparaciones, refuerzos y mantenimiento.
-                </p>
-              </a>
-            </article>
-
-            <article class="card stack-xs service-card">
-              <a class="service-link" href="#galeria">
-                <!-- Personalizados -->
-                <svg
-                  class="service-icon"
-                  viewBox="0 0 24 24"
-                  aria-hidden="true"
-                >
-                  <path
-                    d="M12 2v20M2 12h20"
-                    stroke="currentColor"
-                    stroke-width="2"
-                  />
-                </svg>
-                <h3>Trabajos personalizados</h3>
-                <p class="text-muted">
-                  Traés la idea (o una foto) y lo fabricamos.
-                </p>
-              </a>
+            <article class="card work-card">
+              <img src="assets/mesa.jpg" alt="Pérgola metálica" />
+              <div class="stack-xs">
+                <h3>Pérgola metálica</h3>
+                <a href="#" class="btn btn-outline btn-sm">Ver trabajo</a>
+              </div>
             </article>
           </div>
         </div>
       </section>
 
-      <!-- Galería -->
-      <section id="galeria" class="section section-soft">
+      <!-- =========================
+     PROCESO
+========================== -->
+      <section class="section section--divided process" id="proceso">
         <div class="container stack-md">
           <header class="stack-xs">
-            <h2>Trabajos realizados</h2>
-            <p class="text-muted max-w-lg">
-              Algunos trabajos en hierro realizados a medida para clientes.
+            <h2>Proceso</h2>
+            <p class="text-muted max-w-md">
+              Simple, claro y prolijo. De la idea a la instalación.
             </p>
-            <!-- Filtros -->
-            <div class="gallery-filters">
-              <button class="filter-btn is-active" data-filter="all">
-                Todos
-              </button>
-              <button class="filter-btn" data-filter="rejas">Rejas</button>
-              <button class="filter-btn" data-filter="portones">
-                Portones
-              </button>
-              <button class="filter-btn" data-filter="muebles">Muebles</button>
-              <button class="filter-btn" data-filter="amedida">A medida</button>
-            </div>
           </header>
 
-          <!-- Grid de imágenes -->
-          <div class="gallery-grid">
-            <figure
-              class="gallery-item"
-              data-category="rejas"
-              data-title="Rejas en hierro"
-              data-specs="Hierro macizo|Diseño a medida|Terminación anticorrosiva|Instalación incluida"
-            >
-              <img src="assets/reja.jpg" alt="Reja en hierro" loading="lazy" />
-              <figcaption class="gallery-cap">Rejas</figcaption>
-            </figure>
+          <div class="process-steps">
+            <!-- Paso 1 -->
+            <article class="card process-step">
+              <div class="process-icon" aria-hidden="true">
+                <!-- Cinta métrica -->
+                <svg viewBox="0 0 24 24" fill="none">
+                  <path
+                    d="M8 6h10a3 3 0 0 1 3 3v8a3 3 0 0 1 -3 3H9a3 3 0 0 1 -3 -3V9"
+                    stroke="currentColor"
+                    stroke-width="1.6"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M6 9V7a2 2 0 0 1 2 -2"
+                    stroke="currentColor"
+                    stroke-width="1.6"
+                    stroke-linecap="round"
+                  />
+                  <path
+                    d="M10 10v2M12 10v1M14 10v2M16 10v1M18 10v2"
+                    stroke="currentColor"
+                    stroke-width="1.6"
+                    stroke-linecap="round"
+                  />
+                </svg>
+              </div>
 
-            <figure
-              class="gallery-item"
-              data-category="portones"
-              data-title="Portón corredizo"
-              data-specs="Estructura reforzada|Preparado para automatización|Terminación resistente"
-            >
-              <img
-                src="assets/porton2.jpg"
-                alt="Portón corredizo en hierro"
-                loading="lazy"
-              />
-              <figcaption class="gallery-cap">Portones</figcaption>
-            </figure>
+              <div class="stack-xs">
+                <h3>Medición y asesoramiento</h3>
+                <p class="text-muted">
+                  Tomamos medidas y definimos el tipo de trabajo, terminación y
+                  tiempo estimado.
+                </p>
+              </div>
+            </article>
 
-            <figure
-              class="gallery-item"
-              data-category="muebles"
-              data-title="Mesa estilo industrial"
-              data-specs="Hierro y madera|Diseño industrial|Medidas personalizadas"
-            >
-              <img
-                src="assets/mesa.jpg"
-                alt="Mesa estilo industrial"
-                loading="lazy"
-              />
-              <figcaption class="gallery-cap">Muebles</figcaption>
-            </figure>
+            <!-- Paso 2 -->
+            <article class="card process-step">
+              <div class="process-icon" aria-hidden="true">
+                <!-- Soldadura -->
+                <svg viewBox="0 0 24 24" fill="none">
+                  <path
+                    d="M4 20h16"
+                    stroke="currentColor"
+                    stroke-width="1.6"
+                    stroke-linecap="round"
+                  />
+                  <path
+                    d="M7 17l6-6 3 3-6 6H7v-3z"
+                    stroke="currentColor"
+                    stroke-width="1.6"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M14 8l2-2 2 2-2 2-2-2z"
+                    stroke="currentColor"
+                    stroke-width="1.6"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M18.5 5.5l1-1M20 7l1-1M19 9l1-1"
+                    stroke="currentColor"
+                    stroke-width="1.6"
+                    stroke-linecap="round"
+                  />
+                </svg>
+              </div>
 
-            <figure
-              class="gallery-item"
-              data-category="amedida"
-              data-title="Trabajo a medida"
-              data-specs="Diseño personalizado|Fabricación artesanal|Alta durabilidad"
-            >
-              <img
-                src="assets/banco.jpg"
-                alt="Trabajo a medida en hierro"
-                loading="lazy"
-              />
-              <figcaption class="gallery-cap">A medida</figcaption>
-            </figure>
+              <div class="stack-xs">
+                <h3>Fabricación</h3>
+                <p class="text-muted">
+                  Trabajamos el hierro con foco en resistencia, alineación y
+                  terminación prolija.
+                </p>
+              </div>
+            </article>
 
-            <figure
-              class="gallery-item"
-              data-category="rejas"
-              data-title="Reja con detalle"
-              data-specs="Hierro macizo|Detalles decorativos|Pintura protectora"
-            >
-              <img
-                src="assets/reja.jpg"
-                alt="Reja en hierro con detalle"
-                loading="lazy"
-              />
-              <figcaption class="gallery-cap">Rejas</figcaption>
-            </figure>
+            <!-- Paso 3 -->
+            <article class="card process-step">
+              <div class="process-icon" aria-hidden="true">
+                <!-- Taladro / instalación -->
+                <svg viewBox="0 0 24 24" fill="none">
+                  <path
+                    d="M7 10h7a3 3 0 0 1 3 3v1H7v-4z"
+                    stroke="currentColor"
+                    stroke-width="1.6"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M6 10V8a2 2 0 0 1 2 -2h5"
+                    stroke="currentColor"
+                    stroke-width="1.6"
+                    stroke-linecap="round"
+                  />
+                  <path
+                    d="M17 14l3 2-3 2"
+                    stroke="currentColor"
+                    stroke-width="1.6"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M4 18h10"
+                    stroke="currentColor"
+                    stroke-width="1.6"
+                    stroke-linecap="round"
+                  />
+                </svg>
+              </div>
 
-            <figure
-              class="gallery-item"
-              data-category="portones"
-              data-title="Portón batiente"
-              data-specs="Portón doble hoja|Refuerzos estructurales|Listo para automatizar"
-            >
-              <img
-                src="assets/porton.jpg"
-                alt="Portón batiente en hierro"
-                loading="lazy"
-              />
-              <figcaption class="gallery-cap">Portones</figcaption>
-            </figure>
-
-            <figure
-              class="gallery-item"
-              data-category="muebles"
-              data-title="Estantería de hierro"
-              data-specs="Estructura soldada|Diseño industrial|Soporta alto peso"
-            >
-              <img
-                src="assets/mueble2.jpg"
-                alt="Estantería de hierro"
-                loading="lazy"
-              />
-              <figcaption class="gallery-cap">Muebles</figcaption>
-            </figure>
-
-            <figure
-              class="gallery-item"
-              data-category="amedida"
-              data-title="Estructura metálica"
-              data-specs="Trabajo a medida|Uso estructural|Alta resistencia"
-            >
-              <img
-                src="assets/mueble2.jpg"
-                alt="Estructura metálica a medida"
-                loading="lazy"
-              />
-              <figcaption class="gallery-cap">A medida</figcaption>
-            </figure>
+              <div class="stack-xs">
+                <h3>Instalación</h3>
+                <p class="text-muted">
+                  Instalamos y verificamos funcionamiento, seguridad y detalles
+                  finales.
+                </p>
+              </div>
+            </article>
           </div>
         </div>
       </section>
-
-      <!-- Modal Galería -->
-      <div class="modal-overlay" id="gallery-modal">
-        <div class="modal" role="dialog" aria-modal="true">
-          <button class="modal-close" aria-label="Cerrar">×</button>
-
-          <div class="modal-media">
-            <img id="gallery-modal-image" src="" alt="" />
-          </div>
-
-          <div class="modal-content stack-sm">
-            <h3 id="gallery-modal-title"></h3>
-            <ul id="gallery-modal-specs" class="modal-specs"></ul>
-
-            <!-- CTA -->
-            <a
-              id="gallery-modal-cta"
-              class="btn btn-primary"
-              href="#"
-              target="_blank"
-              rel="noopener"
-            >
-              Pedir presupuesto
-            </a>
-          </div>
-        </div>
-      </div>
-      <!-- Proceso -->
-      <section id="proceso" class="section section-soft">
-        <div class="container stack-md">
-          <header class="stack-xs max-w-lg">
-            <h2>Cómo trabajamos</h2>
+      <!-- =========================
+       CONTACTO
+  ========================== -->
+      <section class="section" id="contacto">
+        <div class="container contact-grid">
+          <!-- Info -->
+          <div class="stack-sm">
+            <h2>Contacto</h2>
             <p class="text-muted">
-              Un proceso simple, claro y sin vueltas para que sepas exactamente
-              qué esperar.
+              Trabajamos en Montevideo y alrededores. Consultanos sin
+              compromiso.
             </p>
-          </header>
 
-          <div class="grid grid-3">
-            <article class="card stack-sm process-card">
-              <span class="process-step">1</span>
-              <h3>Nos contás lo que necesitás</h3>
-              <p class="text-muted">
-                Nos enviás medidas, fotos del lugar y una idea o referencia del
-                trabajo que querés hacer.
-              </p>
-            </article>
+            <ul class="contact-list stack-xs">
+              <li><strong>Zona:</strong> Montevideo · Zona Norte</li>
+              <li><strong>Horario:</strong> L–V · 08:00–18:00</li>
+            </ul>
 
-            <article class="card stack-sm process-card">
-              <span class="process-step">2</span>
-              <h3>Presupuesto y coordinación</h3>
-              <p class="text-muted">
-                Definimos materiales, terminación, tiempos de entrega y
-                coordinamos los próximos pasos.
-              </p>
-            </article>
-
-            <article class="card stack-sm process-card">
-              <span class="process-step">3</span>
-              <h3>Fabricación e instalación</h3>
-              <p class="text-muted">
-                Fabricamos el trabajo en el taller y realizamos la entrega o
-                instalación con terminación prolija.
-              </p>
-            </article>
-          </div>
-        </div>
-      </section>
-      <!-- Contacto -->
-      <section id="contacto" class="section">
-        <div class="container grid contact-grid">
-          <div class="card stack-md">
-            <div class="stack-xs">
-              <h2>Pedí presupuesto</h2>
-              <p class="text-muted">
-                Contanos qué querés hacer. Si podés, mandá medidas y fotos.
-              </p>
-            </div>
-
-            <div class="flex flex-wrap contact-actions">
+            <div class="contact-actions">
               <a
+                href="https://wa.me/598XXXXXXXX"
                 class="btn btn-primary"
-                href="https://wa.me/59895181160?text=Hola%20Herrer%C3%ADa%20Mono%20Garc%C3%ADa%2C%20quiero%20pedir%20presupuesto."
                 target="_blank"
                 rel="noopener"
               >
-                Hablar por WhatsApp
+                Enviar WhatsApp
               </a>
 
-              <a class="btn btn-outline" href="tel:+59895181160">Llamar</a>
+              <a href="tel:+598XXXXXXXX" class="btn btn-outline">
+                Llamar ahora
+              </a>
             </div>
-
-            <ul class="contact-list stack-xs">
-              <li><strong>Zona:</strong> (Montevideo / La Unión)</li>
-              <li><strong>Horario:</strong> 8:00 a 18:00hs</li>
-            </ul>
           </div>
 
-          <div class="contact-side" aria-hidden="true">
+          <!-- Imagen / mapa -->
+          <div class="contact-side">
             <img
+              src="assets/mapa.jpg"
+              alt="Zona de trabajo"
               class="contact-image"
-              src="assets/logoconfondo.jpg"
-              alt=""
-              loading="lazy"
             />
           </div>
         </div>
       </section>
     </main>
+    <footer class="footer site-footer">
+      <div class="container footer-inner">
+        <p class="footer-brand">
+          <strong>Herrería Mono García</strong>
+          <span class="footer-sep">—</span>
+          Montevideo
+        </p>
 
-    <footer class="site-footer">
-      <div class="container flex flex-between flex-wrap footer-inner">
-        <small class="text-muted"
-          >© <span id="year"></span> Herrería Mono García</small
-        >
-        <small class="text-muted">Hecho con código propio</small>
+        <div class="footer-links">
+          <a
+            href="https://www.instagram.com/TU_INSTAGRAM/"
+            target="_blank"
+            rel="noopener"
+          >
+            Instagram
+          </a>
+          <a href="https://wa.me/598XXXXXXXX" target="_blank" rel="noopener">
+            WhatsApp
+          </a>
+        </div>
       </div>
     </footer>
-    <a
-      href="https://wa.me/59895181160?text=Hola%20quiero%20hacer%20una%20consulta."
-      class="whatsapp-sticky"
-      target="_blank"
-      rel="noopener"
-      aria-label="Contactar por WhatsApp"
-    >
-      <svg
-        class="btn-icon"
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        stroke-width="1.25"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        aria-hidden="true"
-      >
-        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-        <path d="M3 21l1.65 -3.8a9 9 0 1 1 3.4 2.9l-5.05 .9" />
-        <path
-          d="M9 10a.5 .5 0 0 0 1 0v-1a.5 .5 0 0 0 -1 0v1a5 5 0 0 0 5 5h1a.5 .5 0 0 0 0 -1h-1a.5 .5 0 0 0 0 1"
-        />
-      </svg>
-    </a>
     <script src="js/app.js"></script>
-    <script>
-      document.getElementById("year").textContent = new Date().getFullYear();
-    </script>
   </body>
 </html>

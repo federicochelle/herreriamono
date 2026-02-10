@@ -18,17 +18,12 @@
    4. PAGES / SECTIONS (hero, landing)
 ========================= */
 @import "hero.css";
-@import "servicios.css";
-@import "repertorio.css";
-@import "galeria.css";
+@import "categorias.css";
 @import "proceso.css";
-@import "contacto.css";
-@import "footer.css";
+@import "galeria.css";
+@import "ubicacion.css";
+@import "propuesta.css";
 /* =========================
    5. OVERRIDES / FIXES (siempre al final)
 ========================= */
-
-/* Ajuste: en oscuro, párrafos deben ser legibles */
-p {
-  color: var(--color-text-muted);
-}
+@import "overrides.css";

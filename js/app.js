@@ -79,135 +79,82 @@ if (header && toggle && mobileMenu && overlay) {
     if (window.innerWidth > 900 && isOpen()) closeMenu();
   });
 }
-
 // =========================
-// MODAL GALERÍA
+// MODAL (simple)
 // =========================
+const openButtons = document.querySelectorAll("[data-modal-open]");
+const closeButtons = document.querySelectorAll("[data-modal-close]");
 
-const galleryItems = document.querySelectorAll(".gallery-item");
-const galleryModal = document.getElementById("gallery-modal");
-const galleryImage = document.getElementById("gallery-modal-image");
-const galleryTitle = document.getElementById("gallery-modal-title");
-const gallerySpecs = document.getElementById("gallery-modal-specs");
-const galleryCTA = document.getElementById("gallery-modal-cta");
+openButtons.forEach((btn) => {
+  btn.addEventListener("click", () => {
+    const id = btn.getAttribute("data-modal-open");
+    const modal = document.getElementById(id);
+    if (!modal) return;
 
-if (
-  galleryModal &&
-  galleryImage &&
-  galleryTitle &&
-  gallerySpecs &&
-  galleryCTA
-) {
-  const galleryClose = galleryModal.querySelector(".modal-close");
-  let lastFocusedEl = null;
+    modal.hidden = false;
+    document.body.style.overflow = "hidden";
 
-  const openGalleryModal = (item) => {
-    lastFocusedEl = document.activeElement;
-
-    const img = item.querySelector("img");
-    if (!img) return;
-
-    const title = item.dataset.title || img.alt || "este trabajo";
-
-    // Imagen
-    galleryImage.src = img.src;
-    galleryImage.alt = title;
-
-    // Título
-    galleryTitle.textContent = title;
-
-    // Specs
-    gallerySpecs.innerHTML = "";
-    if (item.dataset.specs) {
-      item.dataset.specs.split("|").forEach((spec) => {
-        const li = document.createElement("li");
-        li.textContent = spec.trim();
-        gallerySpecs.appendChild(li);
-      });
-    }
-
-    // CTA WhatsApp dinámico
-    const message = `Hola, quiero pedir un presupuesto para ${title}. `;
-    galleryCTA.href = `https://wa.me/59800000000?text=${encodeURIComponent(
-      message,
-    )}`;
-
-    // Mostrar modal
-    galleryModal.classList.add("is-open");
-
-    // Foco accesible
-    galleryClose?.focus();
-  };
-
-  const closeGalleryModal = () => {
-    galleryModal.classList.remove("is-open");
-    galleryImage.src = "";
-    galleryImage.alt = "";
-    galleryCTA.href = "#";
-
-    // Devolver foco
-    if (lastFocusedEl && typeof lastFocusedEl.focus === "function") {
-      lastFocusedEl.focus();
-    }
-  };
-
-  // Abrir modal
-  galleryItems.forEach((item) => {
-    item.tabIndex = 0;
-    item.addEventListener("click", () => openGalleryModal(item));
-    item.addEventListener("keydown", (e) => {
-      if (e.key === "Enter" || e.key === " ") {
-        e.preventDefault();
-        openGalleryModal(item);
-      }
-    });
+    const focusable = modal.querySelector(
+      "button, a, input, [tabindex]:not([tabindex='-1'])",
+    );
+    focusable?.focus();
   });
+});
 
-  // Cerrar con botón
-  galleryClose?.addEventListener("click", closeGalleryModal);
-
-  // Click afuera
-  galleryModal.addEventListener("click", (e) => {
-    if (e.target === galleryModal) closeGalleryModal();
-  });
-
-  // Escape
-  document.addEventListener("keydown", (e) => {
-    if (e.key === "Escape" && galleryModal.classList.contains("is-open")) {
-      closeGalleryModal();
-    }
-  });
+function closeModal(modal) {
+  modal.hidden = true;
+  document.body.style.overflow = "";
 }
 
-// =========================
-// FILTROS GALERÍA
-// =========================
-
-const filterButtons = document.querySelectorAll(".filter-btn");
-const gallerySection = document.getElementById("galeria");
-
-filterButtons.forEach((btn) => {
-  btn.addEventListener("click", () => {
-    const filter = btn.dataset.filter;
-
-    // Estado activo
-    filterButtons.forEach((b) => b.classList.remove("is-active"));
-    btn.classList.add("is-active");
-
-    // Scroll suave (solo útil en mobile)
-    if (window.innerWidth < 900 && gallerySection) {
-      gallerySection.scrollIntoView({ behavior: "smooth" });
-    }
-
-    // Filtrado
-    galleryItems.forEach((item) => {
-      const category = item.dataset.category;
-
-      if (filter === "all" || category === filter) {
-        item.classList.remove("is-hidden");
-      } else {
-        item.classList.add("is-hidden");
-      }
-    });
+closeButtons.forEach((el) => {
+  el.addEventListener("click", () => {
+    const modal = el.closest(".modal");
+    if (modal) closeModal(modal);
   });
+});
+
+document.addEventListener("keydown", (e) => {
+  if (e.key !== "Escape") return;
+  const modal = document.querySelector(".modal:not([hidden])");
+  if (modal) closeModal(modal);
+});
+
+// =========================
+// LIGHTBOX
+// =========================
+const lightbox = document.getElementById("lightbox");
+const lightboxImg = document.getElementById("lightbox-image");
+
+function openLightbox(src, alt = "") {
+  if (!lightbox || !lightboxImg) return;
+  lightboxImg.src = src;
+  lightboxImg.alt = alt;
+  lightbox.hidden = false;
+  document.body.style.overflow = "hidden";
+}
+
+function closeLightbox() {
+  if (!lightbox) return;
+  lightbox.hidden = true;
+  lightboxImg.src = "";
+  document.body.style.overflow = "";
+}
+
+document.addEventListener("click", (e) => {
+  const item = e.target.closest("[data-lightbox]");
+  if (item) {
+    const img = item.querySelector("img");
+    openLightbox(item.dataset.lightbox, img?.alt || "");
+    return;
+  }
+
+  if (e.target.closest("[data-lightbox-close]")) {
+    closeLightbox();
+  }
+});
+
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape" && lightbox && !lightbox.hidden) {
+    closeLightbox();
+  }
 });

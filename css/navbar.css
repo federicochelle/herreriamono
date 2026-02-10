@@ -1,14 +1,42 @@
-/* =========================
-   HEADER + NAVBAR (limpio)
-========================= */
+/* =====================================================
+   NAVBAR.CSS — Librería (NEUTRA)
+   Header sticky + nav desktop + menú mobile
+   (sin decisiones de tema; todo por variables)
+===================================================== */
 
-/* Header */
+/* =========================
+   TOKENS (fallbacks)
+   El theme puede pisar cualquiera
+========================= */
+:root {
+  --header-bg: var(--color-surface);
+  --header-backdrop: blur(10px);
+
+  --nav-link-color: var(--color-text-muted);
+  --nav-link-hover: var(--color-text);
+
+  --nav-toggle-bg: transparent;
+  --nav-toggle-border: var(--color-border);
+
+  --nav-overlay-bg: rgba(0, 0, 0, 0.18);
+  --nav-overlay-backdrop: blur(2px);
+
+  --info-strip-bg: transparent;
+  --info-strip-text: var(--color-text-muted);
+
+  --nav-shadow: var(--shadow-md, 0 12px 28px rgba(0, 0, 0, 0.14));
+}
+
+/* =========================
+   HEADER
+========================= */
 .site-header {
   position: sticky;
   top: 0;
   z-index: 100;
-  background: rgba(11, 15, 20, 0.75);
-  backdrop-filter: blur(10px);
+
+  background: var(--header-bg);
+  backdrop-filter: var(--header-backdrop);
   border-bottom: 1px solid var(--color-border);
 }
 
@@ -17,48 +45,80 @@
   gap: var(--space-sm);
 }
 
-/* =========================
-   BRAND (logo + texto)
-========================= */
-
-.brand {
+/* Branding */
+.brand-logo-only {
   display: flex;
   align-items: center;
-  gap: 0.6rem;
 }
 
 .brand-logo {
-  width: 44px;
+  width: 77px;
   height: 44px;
-  border-radius: 50%;
-  border: 1px solid var(--color-border);
-  background: #000;
-  object-fit: cover;
-}
-
-.brand-text {
-  display: flex;
-  flex-direction: column;
-  line-height: 1.1;
-}
-
-.brand-kicker {
-  font-size: 0.75rem;
-  color: var(--color-text-muted);
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-}
-
-.brand-name {
-  font-weight: var(--font-weight-bold);
-  color: var(--color-text);
-  letter-spacing: 0.02em;
+  object-fit: contain;
 }
 
 /* =========================
-   NAV (links)
+   INFO STRIP (opcional)
 ========================= */
+.info-strip {
+  background: var(--info-strip-bg);
+  border-top: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
+  position: relative;
+  z-index: 10;
+  padding: 0.5rem 0;
+  font-size: 0.75rem;
+}
 
+.info-strip-inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(0.75rem, 3vw, 2rem);
+  padding: 0 1rem;
+
+  flex-wrap: nowrap;
+  white-space: nowrap;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+
+.info-strip-inner::-webkit-scrollbar {
+  display: none;
+}
+
+.info-strip-inner > * {
+  flex: 0 0 auto;
+  white-space: nowrap;
+}
+
+.info-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.2rem;
+  font-size: 0.95rem;
+  color: var(--info-strip-text);
+}
+
+.info-google {
+  cursor: pointer;
+}
+
+.info-google:hover {
+  text-decoration: underline;
+  color: var(--color-text);
+}
+
+.icon {
+  width: 1.2em;
+  height: 1.2em;
+  opacity: 0.75;
+}
+
+/* =========================
+   NAV LINKS
+========================= */
 .nav {
   display: flex;
   align-items: center;
@@ -67,45 +127,45 @@
 }
 
 .nav-link {
-  color: var(--color-text-muted);
+  color: var(--nav-link-color);
   font-weight: var(--font-weight-medium);
   transition: color var(--transition-fast);
 }
 
 .nav-link:hover {
-  color: var(--color-text);
+  color: var(--nav-link-hover);
 }
 
-/* Desktop / Mobile visibilidad */
+/* Desktop nav container */
 .nav-desktop {
   display: flex;
   align-items: center;
   gap: 1rem;
 }
 
+/* =========================
+   TOGGLE (mobile)
+========================= */
 .nav-toggle {
   display: none;
-}
-
-/* =========================
-   NAV TOGGLE (hamburguesa)
-========================= */
-
-.nav-toggle {
   align-items: center;
   justify-content: center;
+
   width: 42px;
   height: 42px;
+
   border-radius: var(--radius-sm);
-  border: 1px solid var(--color-border);
-  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--nav-toggle-border);
+  background: var(--nav-toggle-bg);
 }
 
+/* Hamburger */
 .nav-toggle-lines {
   position: relative;
   width: 18px;
   height: 2px;
-  background: var(--color-text);
+  background: currentColor;
+  color: var(--color-text);
 }
 
 .nav-toggle-lines::before,
@@ -115,7 +175,7 @@
   left: 0;
   width: 18px;
   height: 2px;
-  background: var(--color-text);
+  background: currentColor;
 }
 
 .nav-toggle-lines::before {
@@ -129,51 +189,15 @@
 /* =========================
    MOBILE MENU + OVERLAY
 ========================= */
-
-.menu-overlay {
-  position: fixed;
-  inset: 0;
-  background: rgba(11, 15, 20, 0.65);
-  backdrop-filter: blur(2px);
-  z-index: 90;
-}
-
-.mobile-menu {
-  position: absolute;
-  top: 100%;
-  left: 0;
-  width: 100%;
-  z-index: 100;
-}
-
-.mobile-menu .nav-mobile {
-  max-width: 1200px;
-  margin-inline: auto;
-  background: rgba(11, 15, 20, 0.75);
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-md);
-  padding: var(--space-md);
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  box-shadow: var(--shadow-md);
-}
-
-/* Estado abierto */
+/* Desktop: no existen */
 .site-header .menu-overlay,
 .site-header .mobile-menu {
   display: none;
 }
 
-.site-header.is-open .menu-overlay,
-.site-header.is-open .mobile-menu {
-  display: block;
-}
-
 /* =========================
    MOBILE
 ========================= */
-
 @media (max-width: 900px) {
   .nav-desktop {
     display: none;
@@ -181,5 +205,109 @@
 
   .nav-toggle {
     display: inline-flex;
+  }
+
+  /* Ahora existen */
+  .site-header .menu-overlay,
+  .site-header .mobile-menu {
+    display: block;
+  }
+
+  /* Overlay */
+  .menu-overlay {
+    position: fixed;
+    inset: 0;
+    background: var(--nav-overlay-bg);
+    backdrop-filter: var(--nav-overlay-backdrop);
+    z-index: 90;
+
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 220ms ease;
+  }
+
+  /* Contenedor del menú */
+  .mobile-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    z-index: 110;
+
+    opacity: 0;
+    transform: translateY(-6px);
+    pointer-events: none;
+    transition:
+      opacity 220ms ease,
+      transform 220ms ease;
+    will-change: opacity, transform;
+  }
+
+  .mobile-menu .nav-mobile {
+    max-width: 1200px;
+    margin-inline: auto;
+
+    background: var(--header-bg);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+
+    padding: var(--space-md);
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    box-shadow: var(--nav-shadow);
+  }
+
+  /* Estado abierto */
+  .site-header.is-open .menu-overlay {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .site-header.is-open .mobile-menu {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+  }
+}
+
+/* =========================
+   BRAND TEXT — HERRERÍA
+========================= */
+
+.brand-with-text {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+/* Bloque de texto */
+.brand-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1;
+}
+
+/* HERRERÍA (arriba, chico) */
+.brand-kicker {
+  font-size: 0.65rem;
+  letter-spacing: 0.18em;
+  font-weight: 600;
+  color: rgba(242, 244, 247, 0.7);
+}
+
+/* Mono García (principal) */
+.brand-name {
+  font-size: 1.05rem;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+  color: #f2f4f7;
+}
+
+/* Mobile: un poquito más compacto */
+@media (max-width: 600px) {
+  .brand-name {
+    font-size: 0.95rem;
   }
 }

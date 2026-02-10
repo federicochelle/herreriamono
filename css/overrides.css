@@ -1,0 +1,405 @@
+/* =====================================================
+   OVERRIDES — HERRERÍA (MOCKUP CLARO)
+   Fondo blanco + header oscuro + CTA verde
+===================================================== */
+
+:root {
+  /* Base clara (como el mockup) */
+  --color-bg: #f3f3f3;
+  --color-surface: #ffffff;
+  --color-text: #111111;
+  --color-text-muted: #5a5a5a;
+  --color-border: rgba(0, 0, 0, 0.12);
+
+  /* CTA */
+  --color-primary: #2bb741;
+  --color-primary-dark: #1f8f33;
+
+  /* Sombras suaves (look e-commerce) */
+  --shadow-sm: 0 10px 22px rgba(0, 0, 0, 0.1);
+  --shadow-md: 0 16px 36px rgba(0, 0, 0, 0.14);
+
+  /* Navbar */
+  --header-bg: rgba(11, 15, 20, 0.92);
+  --nav-link-color: rgba(242, 244, 247, 0.78);
+  --nav-link-hover: #ffffff;
+
+  --nav-toggle-bg: rgba(255, 255, 255, 0.06);
+  --nav-toggle-border: rgba(255, 255, 255, 0.14);
+
+  /* Overlay / mobile menu */
+  --nav-overlay-bg: rgba(0, 0, 0, 0.35);
+
+  /* anchors */
+  --nav-offset: 88px;
+
+  /* Info strip */
+  --info-strip-bg: rgba(255, 255, 255, 0.7);
+  --info-strip-text: #3c3c3c;
+}
+
+/* Fondo global */
+body {
+  background: var(--color-bg);
+}
+
+/* =====================================================
+   NAVBAR (adaptado a tu navbar de librería)
+===================================================== */
+.site-header {
+  background: var(--header-bg);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+}
+
+/* strip claro arriba (si lo usás) */
+.info-strip {
+  background: var(--info-strip-bg);
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.info-item {
+  color: var(--info-strip-text);
+}
+
+/* links del nav */
+.nav-link {
+  color: var(--nav-link-color);
+}
+.nav-link:hover {
+  color: var(--nav-link-hover);
+}
+
+/* CTA en nav: más “recto” como mockup */
+.nav-cta.btn-primary,
+.btn.btn-primary {
+  border-radius: 4px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.18);
+}
+
+/* outline tipo mockup (gris oscuro) */
+.btn.btn-outline {
+  border-radius: 4px;
+  border-color: rgba(255, 255, 255, 0.28); /* se ve bien en header oscuro */
+}
+
+/* Toggle hamburguesa */
+.nav-toggle {
+  background: var(--nav-toggle-bg);
+  border-color: var(--nav-toggle-border);
+}
+
+/* Overlay (tu navbar lo usa) */
+.menu-overlay {
+  background: var(--nav-overlay-bg);
+}
+
+/* Menú mobile panel (tu navbar lo usa) */
+.mobile-menu .nav-mobile {
+  background: var(--header-bg);
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+/* =====================================================
+   SECCIONES (divisiones suaves como mockup)
+===================================================== */
+.section--divided {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+/* =====================================================
+   CARDS “ecommerce”
+===================================================== */
+.card {
+  background: var(--color-surface);
+  border-color: var(--color-border);
+  box-shadow: var(--shadow-sm);
+  border-radius: 6px; /* mockup más cuadrado */
+}
+
+/* =====================================================
+   HERO (foto + overlay, mover imagen a derecha + oscurecer)
+===================================================== */
+.hero {
+  position: relative;
+  color: #fff;
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+/* overlay */
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 0.62) 0%,
+    rgba(0, 0, 0, 0.38) 55%,
+    rgba(0, 0, 0, 0.16) 100%
+  );
+}
+
+.hero-media {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.hero-media img,
+.hero-media video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+
+  /* ✅ mover más a la derecha */
+  object-position: 78% center;
+
+  /* ✅ un poco más oscura */
+  filter: brightness(0.82) contrast(1.05);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+}
+
+/* en desktop: más “mockup” (texto un poco a la izquierda) */
+@media (min-width: 900px) {
+  .hero-content {
+    max-width: 820px;
+  }
+}
+
+/* =====================================================
+   CATEGORÍAS (cards con imagen + título encima + botón abajo)
+===================================================== */
+.category-card {
+  position: relative;
+  overflow: hidden;
+  padding: 0;
+}
+
+.category-card img {
+  width: 100%;
+  height: 190px;
+  object-fit: cover;
+  display: block;
+}
+
+/* título encima */
+.category-card .card-title {
+  position: absolute;
+  left: 14px;
+  bottom: 52px;
+  margin: 0;
+  color: #fff;
+  font-weight: 700;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.6);
+}
+
+/* botón tipo “cinta” */
+.category-card .card-action {
+  position: absolute;
+  left: 14px;
+  bottom: 14px;
+}
+
+/* botón más cuadrado como mockup */
+.category-card .btn {
+  border-radius: 4px;
+  padding: 0.5rem 0.9rem;
+}
+
+/* =====================================================
+   TRABAJOS DESTACADOS
+===================================================== */
+.work-card {
+  padding: 0;
+  overflow: hidden;
+}
+
+.work-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  display: block;
+}
+
+/* =====================================================
+   FOOTER
+===================================================== */
+.site-footer,
+.footer {
+  background: #000;
+}
+
+/* =====================================================
+   WHATSAPP FLOAT
+===================================================== */
+.whatsapp-sticky {
+  background: #25d366;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.3);
+}
+
+/* =====================================================
+   SCROLL / ANCHORS
+===================================================== */
+html {
+  scroll-padding-top: var(--nav-offset);
+  scroll-behavior: smooth;
+}
+
+/* =====================================================
+   MOBILE
+===================================================== */
+@media (max-width: 768px) {
+  .hero {
+    min-height: 60vh;
+  }
+
+  .hero::before {
+    background: rgba(0, 0, 0, 0.55);
+  }
+
+  .hero-media img,
+  .hero-media video {
+    object-position: 65% center;
+    filter: brightness(0.8) contrast(1.05);
+  }
+
+  /* outline en mobile menu (ya no está sobre hero) */
+  .btn.btn-outline {
+    border-color: rgba(255, 255, 255, 0.18);
+  }
+}
+
+/* =====================================================
+   TIPOGRAFÍA — HERRERÍA (MOCKUP)
+   Bebas Neue para TODOS los títulos + Inter para UI
+===================================================== */
+
+:root {
+  /* Títulos / display */
+  --font-display: "Bebas Neue", system-ui, sans-serif;
+
+  /* UI / párrafos / botones */
+  --font-ui:
+    "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    sans-serif;
+}
+
+/* UI base */
+body {
+  font-family: var(--font-ui);
+}
+
+/* =========================
+   HERO
+========================= */
+.hero h1 {
+  font-family: var(--font-display);
+  font-weight: 400; /* Bebas es mejor en regular */
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  line-height: 0.95;
+
+  /* tamaño tipo mockup */
+  font-size: clamp(2.4rem, 5vw, 4rem);
+
+  color: #fff;
+  text-shadow: 0 10px 28px rgba(0, 0, 0, 0.45);
+}
+
+/* Subtítulo del hero */
+.hero p {
+  font-family: var(--font-ui);
+  font-size: clamp(1rem, 1.2vw, 1.15rem);
+  max-width: 42ch;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+/* =========================
+   TÍTULOS (GLOBAL)
+   -> aplica a TODOS los h1-h6 sin repetir selectores raros
+========================= */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.section-title {
+  font-family: var(--font-display);
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* Tamaños de secciones */
+h2,
+.section-title,
+section > header h2 {
+  line-height: 1.05;
+  font-size: clamp(1.8rem, 3vw, 2.4rem);
+  color: var(--color-text);
+}
+
+/* Títulos dentro de cards */
+.card-title,
+.category-card h3,
+.work-card h3 {
+  line-height: 1.05;
+  font-size: 1.4rem;
+  color: inherit;
+}
+
+/* =========================
+   META / TEXTOS CHICOS
+   (NO meto .text-muted acá)
+========================= */
+.card small,
+.meta {
+  font-size: 0.9rem;
+}
+
+/* =====================================================
+   MOBILE — TÍTULOS MÁS GRANDES Y PESADOS
+===================================================== */
+
+@media (max-width: 768px) {
+  /* HERO */
+  .hero h1 {
+    font-size: clamp(3.2rem, 10vw, 4.4rem);
+
+    /* sensación de grosor */
+    letter-spacing: 0.025em;
+    line-height: 0.9;
+
+    text-shadow:
+      0 6px 18px rgba(0, 0, 0, 0.55),
+      0 2px 6px rgba(0, 0, 0, 0.35);
+  }
+
+  /* TÍTULOS DE SECCIÓN */
+  h2,
+  .section-title,
+  section > header h2 {
+    font-size: clamp(2.4rem, 8vw, 3rem);
+    letter-spacing: 0.03em;
+    line-height: 0.95;
+  }
+
+  /* TÍTULOS DE CARDS */
+  .card-title,
+  .category-card h3,
+  .work-card h3 {
+    font-size: clamp(1.7rem, 6vw, 2rem);
+    letter-spacing: 0.03em;
+    line-height: 1;
+  }
+}
