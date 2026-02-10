@@ -1,0 +1,78 @@
+/* =========================
+   TRABAJOS COMERCIALES — AUTO CAROUSEL
+========================= */
+
+.work-row .row-head {
+  gap: 0.75rem;
+  align-items: baseline;
+}
+
+.auto-carousel {
+  overflow: hidden;
+  border-radius: var(--radius-md);
+}
+
+.auto-track {
+  display: flex;
+  gap: 0.9rem;
+  align-items: stretch;
+
+  /* Autoplay: se mueve solo */
+  animation: slide-left linear infinite;
+  will-change: transform;
+}
+
+/* Imágenes */
+.auto-track img {
+  height: 220px;
+  width: auto;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border);
+  flex: 0 0 auto;
+}
+
+/* Velocidad por carrusel */
+.auto-carousel[data-speed="28"] .auto-track {
+  animation-duration: 28s;
+}
+.auto-carousel[data-speed="30"] .auto-track {
+  animation-duration: 30s;
+}
+.auto-carousel[data-speed="32"] .auto-track {
+  animation-duration: 32s;
+}
+
+/* Pausa al hover (desktop) */
+@media (hover: hover) {
+  .auto-carousel:hover .auto-track {
+    animation-play-state: paused;
+  }
+}
+
+/* Accesibilidad: si el usuario prefiere menos movimiento */
+@media (prefers-reduced-motion: reduce) {
+  .auto-track {
+    animation: none;
+  }
+}
+
+/* Animación */
+@keyframes slide-left {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .auto-track img {
+    height: 180px;
+    border-radius: 2px;
+  }
+}

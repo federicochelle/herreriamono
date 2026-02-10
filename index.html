@@ -201,7 +201,7 @@
               <img src="assets/reja.jpg" alt="Rejas de hierro" />
               <h3 class="card-title">Rejas</h3>
               <div class="card-action">
-                <a href="#rejas" class="btn btn-outline btn-sm">Ver catálogo</a>
+                <a href="#rejas" class="btn btn-outline btn-sm">Ver trabajos</a>
               </div>
             </article>
 
@@ -211,18 +211,18 @@
               <h3 class="card-title">Portones</h3>
               <div class="card-action">
                 <a href="#portones" class="btn btn-outline btn-sm"
-                  >Ver catálogo</a
+                  >Ver trabajos</a
                 >
               </div>
             </article>
 
             <!-- Estructuras -->
             <article class="card category-card">
-              <img src="assets/mueble.jpg" alt="Estructuras metálicas" />
+              <img src="assets/escaleraa.jpeg" alt="Estructuras metálicas" />
               <h3 class="card-title">Estructuras</h3>
               <div class="card-action">
                 <a href="#estructuras" class="btn btn-outline btn-sm"
-                  >Ver catálogo</a
+                  >Ver trabajos</a
                 >
               </div>
             </article>
@@ -233,7 +233,7 @@
               <h3 class="card-title">Muebles en hierro</h3>
               <div class="card-action">
                 <a href="#muebles" class="btn btn-outline btn-sm"
-                  >Ver catálogo</a
+                  >Ver trabajos</a
                 >
               </div>
             </article>
@@ -242,45 +242,424 @@
       </section>
 
       <!-- =========================
-       TRABAJOS DESTACADOS
-  ========================== -->
-      <section class="section section--divided" id="trabajos">
+     TRABAJOS COMERCIALES (3 carruseles)
+========================== -->
+      <section class="section section--divided" id="trabajos-comerciales">
         <div class="container stack-md">
           <header class="stack-xs">
-            <h2>Trabajos destacados</h2>
+            <h2>Trabajos comerciales</h2>
             <p class="text-muted max-w-md">
-              Algunos de nuestros trabajos realizados a medida.
+              Instalaciones y muebles para locales, oficinas y espacios
+              gastronómicos.
             </p>
           </header>
 
-          <div class="grid grid-3">
-            <article class="card work-card">
-              <img src="assets/porton2.jpg" alt="Portón corredizo" />
-              <div class="stack-xs">
-                <h3>Portón corredizo</h3>
-                <a href="#" class="btn btn-outline btn-sm">Ver trabajo</a>
-              </div>
-            </article>
+          <!-- Carrusel 1 -->
+          <section
+            class="work-row stack-sm"
+            aria-label="Trabajos en gastronomía"
+          >
+            <div class="row-head flex flex-between flex-wrap">
+              <h3 class="row-title">Gastronomía</h3>
+              <span class="row-hint text-muted">Se desliza solo</span>
+            </div>
 
-            <article class="card work-card">
-              <img src="assets/reja.jpg" alt="Reja de seguridad" />
-              <div class="stack-xs">
-                <h3>Reja de seguridad</h3>
-                <a href="#" class="btn btn-outline btn-sm">Ver trabajo</a>
-              </div>
-            </article>
+            <div class="auto-carousel" data-autoplay="true" data-speed="28">
+              <div class="auto-track">
+                <img
+                  src="assets/opb.jpeg"
+                  alt="Barra de hierro para restaurante"
+                />
+                <img
+                  src="assets/opb.jpeg"
+                  alt="Estantería industrial para cocina"
+                />
+                <img
+                  src="assets/opb.jpeg"
+                  alt="Mesas y bases metálicas para local"
+                />
+                <img
+                  src="assets/opb.jpeg"
+                  alt="Mueble metálico para cafetería"
+                />
 
-            <article class="card work-card">
-              <img src="assets/mesa.jpg" alt="Pérgola metálica" />
-              <div class="stack-xs">
-                <h3>Pérgola metálica</h3>
-                <a href="#" class="btn btn-outline btn-sm">Ver trabajo</a>
+                <!-- repetí 2–3 más si querés -->
               </div>
-            </article>
-          </div>
+            </div>
+          </section>
+
+          <!-- Carrusel 2 -->
+          <section class="work-row stack-sm" aria-label="Trabajos en tiendas">
+            <div class="row-head flex flex-between flex-wrap">
+              <h3 class="row-title">Tiendas</h3>
+              <span class="row-hint text-muted">Se desliza solo</span>
+            </div>
+
+            <div class="auto-carousel" data-autoplay="true" data-speed="32">
+              <div class="auto-track">
+                <img
+                  src="assets/showroom.jpeg"
+                  alt="Perchero metálico para tienda"
+                />
+                <img
+                  src="assets/showroom.jpeg"
+                  alt="Perchero metálico para tienda"
+                />
+                <img
+                  src="assets/showroom.jpeg"
+                  alt="Perchero metálico para tienda"
+                />
+              </div>
+            </div>
+          </section>
+          </section>
         </div>
       </section>
+      <!-- =========================
+     PRODUCTOS EN STOCK (VITRINA)
+========================== -->
+      <section class="section section--divided" id="stock">
+        <div class="container stack-md">
+          <header class="stack-xs">
+            <h2>Productos en stock</h2>
+            <p class="text-muted max-w-md">
+              Precio fijo · Stock real · Entrega rápida. ¿Lo querés a medida?
+              También lo fabricamos.
+            </p>
+          </header>
 
+          <!-- =========================
+         ROW 1 — Estanterías
+    ========================== -->
+          <section
+            class="product-row stack-sm"
+            aria-label="Estanterías en stock"
+          >
+            <div class="row-head flex flex-between flex-wrap">
+              <h3 class="row-title">Estanterías y muebles</h3>
+            </div>
+
+            <div class="product-track">
+              <article class="card product-card">
+                <img
+                  src="assets/estaanteria.jpeg"
+                  alt="Estantería industrial 6 estantes"
+                />
+                <div class="product-body stack-xs">
+                  <div class="product-top flex flex-between">
+                    <h4 class="product-title">Estantería 6 estantes</h4>
+                    <span class="badge badge-stock">En stock</span>
+                  </div>
+                  <p class="product-meta">Hierro + madera · 200×80</p>
+                  <div class="product-bottom flex flex-between flex-wrap">
+                    <strong class="product-price">$ 12.900</strong>
+                    <a
+                      class="btn btn-outline btn-sm"
+                      href="https://wa.me/598XXXXXXXX?text=Hola!%20Quiero%20reservar%20la%20Estanter%C3%ADa%206%20estantes%20($%2012.900)."
+                      target="_blank"
+                      rel="noopener"
+                      >Reservar</a
+                    >
+                  </div>
+                </div>
+              </article>
+
+              <article class="card product-card">
+                <img
+                  src="assets/escritorio.jpeg"
+                  alt="Estantería 4 estantes reforzada"
+                />
+                <div class="product-body stack-xs">
+                  <div class="product-top flex flex-between">
+                    <h4 class="product-title">Escritorio</h4>
+                    <span class="badge badge-last">Últimas</span>
+                  </div>
+                  <p class="product-meta">Hierro negro · 180×70</p>
+                  <div class="product-bottom flex flex-between flex-wrap">
+                    <strong class="product-price">$ 9.900</strong>
+                    <a
+                      class="btn btn-outline btn-sm"
+                      href="https://wa.me/598XXXXXXXX?text=Hola!%20Quiero%20reservar%20la%20Estanter%C3%ADa%204%20estantes%20($%209.900)."
+                      target="_blank"
+                      rel="noopener"
+                      >Reservar</a
+                    >
+                  </div>
+                </div>
+              </article>
+
+              <article class="card product-card">
+                <img src="assets/mueble2.jpg" alt="Estantería esquinera" />
+                <div class="product-body stack-xs">
+                  <div class="product-top flex flex-between">
+                    <h4 class="product-title">Estructura acuario</h4>
+                    <span class="badge badge-stock">En stock</span>
+                  </div>
+                  <p class="product-meta">Hierro · 170×60</p>
+                  <div class="product-bottom flex flex-between flex-wrap">
+                    <strong class="product-price">$ 8.500</strong>
+                    <a
+                      class="btn btn-outline btn-sm"
+                      href="https://wa.me/598XXXXXXXX?text=Hola!%20Quiero%20reservar%20la%20Estanter%C3%ADa%20esquinera%20($%208.500)."
+                      target="_blank"
+                      rel="noopener"
+                      >Reservar</a
+                    >
+                  </div>
+                </div>
+              </article>
+
+              <article class="card product-card">
+                <img src="assets/mueble.jpg" alt="Estantería compacta" />
+                <div class="product-body stack-xs">
+                  <div class="product-top flex flex-between">
+                    <h4 class="product-title">Estantería compacta</h4>
+                    <span class="badge badge-stock">En stock</span>
+                  </div>
+                  <p class="product-meta">Hierro · 120×60</p>
+                  <div class="product-bottom flex flex-between flex-wrap">
+                    <strong class="product-price">$ 6.900</strong>
+                    <a
+                      class="btn btn-outline btn-sm"
+                      href="https://wa.me/598XXXXXXXX?text=Hola!%20Quiero%20reservar%20la%20Estanter%C3%ADa%20compacta%20($%206.900)."
+                      target="_blank"
+                      rel="noopener"
+                      >Reservar</a
+                    >
+                  </div>
+                </div>
+              </article>
+            </div>
+          </section>
+
+          <!-- =========================
+         ROW 2 — Mesas y muebles
+    ========================== -->
+          <section
+            class="product-row stack-sm"
+            aria-label="Mesas y muebles en stock"
+          >
+            <div class="row-head flex flex-between flex-wrap">
+              <h3 class="row-title">Mesas y asientos</h3>
+            </div>
+
+            <div class="product-track">
+              <article class="card product-card">
+                <img src="assets/mesa.jpg" alt="Mesa industrial" />
+                <div class="product-body stack-xs">
+                  <div class="product-top flex flex-between">
+                    <h4 class="product-title">Mesa industrial</h4>
+                    <span class="badge badge-stock">En stock</span>
+                  </div>
+                  <p class="product-meta">Hierro + madera · 140×80</p>
+                  <div class="product-bottom flex flex-between flex-wrap">
+                    <strong class="product-price">$ 18.900</strong>
+                    <a
+                      class="btn btn-outline btn-sm"
+                      href="https://wa.me/598XXXXXXXX?text=Hola!%20Quiero%20reservar%20la%20Mesa%20industrial%20($%2018.900)."
+                      target="_blank"
+                      rel="noopener"
+                      >Reservar</a
+                    >
+                  </div>
+                </div>
+              </article>
+
+              <article class="card product-card">
+                <img src="assets/mesass.jpeg" alt="Mesa ratona" />
+                <div class="product-body stack-xs">
+                  <div class="product-top flex flex-between">
+                    <h4 class="product-title">Mesa ratona</h4>
+                    <span class="badge badge-stock">En stock</span>
+                  </div>
+                  <p class="product-meta">Hierro · 90×50</p>
+                  <div class="product-bottom flex flex-between flex-wrap">
+                    <strong class="product-price">$ 7.900</strong>
+                    <a
+                      class="btn btn-outline btn-sm"
+                      href="https://wa.me/598XXXXXXXX?text=Hola!%20Quiero%20reservar%20la%20Mesa%20ratona%20($%207.900)."
+                      target="_blank"
+                      rel="noopener"
+                      >Reservar</a
+                    >
+                  </div>
+                </div>
+              </article>
+
+              <article class="card product-card">
+                <img src="assets/mesa.jpeg" alt="Set mesitas nido" />
+                <div class="product-body stack-xs">
+                  <div class="product-top flex flex-between">
+                    <h4 class="product-title">Mesitas nido (set)</h4>
+                    <span class="badge badge-last">Últimas</span>
+                  </div>
+                  <p class="product-meta">Hierro + madera · x2</p>
+                  <div class="product-bottom flex flex-between flex-wrap">
+                    <strong class="product-price">$ 9.400</strong>
+                    <a
+                      class="btn btn-outline btn-sm"
+                      href="https://wa.me/598XXXXXXXX?text=Hola!%20Quiero%20reservar%20las%20Mesitas%20nido%20(set)%20($%209.400)."
+                      target="_blank"
+                      rel="noopener"
+                      >Reservar</a
+                    >
+                  </div>
+                </div>
+              </article>
+
+              <article class="card product-card">
+                <img src="assets/banco.jpg" alt="Mueble auxiliar" />
+                <div class="product-body stack-xs">
+                  <div class="product-top flex flex-between">
+                    <h4 class="product-title">banco a medida</h4>
+                    <span class="badge badge-stock">En stock</span>
+                  </div>
+                  <p class="product-meta">Hierro · 90×40</p>
+                  <div class="product-bottom flex flex-between flex-wrap">
+                    <strong class="product-price">$ 8.200</strong>
+                    <a
+                      class="btn btn-outline btn-sm"
+                      href="https://wa.me/598XXXXXXXX?text=Hola!%20Quiero%20reservar%20el%20Mueble%20auxiliar%20($%208.200)."
+                      target="_blank"
+                      rel="noopener"
+                      >Reservar</a
+                    >
+                  </div>
+                </div>
+              </article>
+            </div>
+          </section>
+
+          <!-- =========================
+         ROW 3 — Exterior
+    ========================== -->
+          <section class="product-row stack-sm" aria-label="Exterior en stock">
+            <div class="row-head flex flex-between flex-wrap">
+              <h3 class="row-title">Exterior</h3>
+            </div>
+
+            <div class="product-track">
+              <article class="card product-card">
+                <img src="assets/parrilla.jpeg" alt="Parrillero compacto" />
+                <div class="product-body stack-xs">
+                  <div class="product-top flex flex-between">
+                    <h4 class="product-title">Parrillero compacto</h4>
+                    <span class="badge badge-stock">En stock</span>
+                  </div>
+                  <p class="product-meta">Hierro · portátil</p>
+                  <div class="product-bottom flex flex-between flex-wrap">
+                    <strong class="product-price">$ 11.500</strong>
+                    <a
+                      class="btn btn-outline btn-sm"
+                      href="https://wa.me/598XXXXXXXX?text=Hola!%20Quiero%20reservar%20el%20Parrillero%20compacto%20($%2011.500)."
+                      target="_blank"
+                      rel="noopener"
+                      >Reservar</a
+                    >
+                  </div>
+                </div>
+              </article>
+
+              <article class="card product-card">
+                <img src="assets/fogon.jpeg" alt="Fogón" />
+                <div class="product-body stack-xs">
+                  <div class="product-top flex flex-between">
+                    <h4 class="product-title">Fogón</h4>
+                    <span class="badge badge-stock">En stock</span>
+                  </div>
+                  <p class="product-meta">Hierro · 60 cm</p>
+                  <div class="product-bottom flex flex-between flex-wrap">
+                    <strong class="product-price">$ 6.500</strong>
+                    <a
+                      class="btn btn-outline btn-sm"
+                      href="https://wa.me/598XXXXXXXX?text=Hola!%20Quiero%20reservar%20el%20Fog%C3%B3n%20($%206.500)."
+                      target="_blank"
+                      rel="noopener"
+                      >Reservar</a
+                    >
+                  </div>
+                </div>
+              </article>
+
+              <article class="card product-card">
+                <img src="assets/plancheta.jpeg" alt="Banco exterior" />
+                <div class="product-body stack-xs">
+                  <div class="product-top flex flex-between">
+                    <h4 class="product-title">PLANCHETA</h4>
+                    <span class="badge badge-last">Últimas</span>
+                  </div>
+                  <p class="product-meta">Hierro · 120</p>
+                  <div class="product-bottom flex flex-between flex-wrap">
+                    <strong class="product-price">$ 7.300</strong>
+                    <a
+                      class="btn btn-outline btn-sm"
+                      href="https://wa.me/598XXXXXXXX?text=Hola!%20Quiero%20reservar%20el%20Banco%20exterior%20($%207.300)."
+                      target="_blank"
+                      rel="noopener"
+                      >Reservar</a
+                    >
+                  </div>
+                </div>
+              </article>
+
+              <article class="card product-card">
+                <img src="assets/parrillas.jpeg" alt="Macetero industrial" />
+                <div class="product-body stack-xs">
+                  <div class="product-top flex flex-between">
+                    <h4 class="product-title">parrilleros</h4>
+                    <span class="badge badge-stock">En stock</span>
+                  </div>
+                  <p class="product-meta">Hierro · 45 cm</p>
+                  <div class="product-bottom flex flex-between flex-wrap">
+                    <strong class="product-price">$ 3.900</strong>
+                    <a
+                      class="btn btn-outline btn-sm"
+                      href="https://wa.me/598XXXXXXXX?text=Hola!%20Quiero%20reservar%20el%20Macetero%20industrial%20($%203.900)."
+                      target="_blank"
+                      rel="noopener"
+                      >Reservar</a
+                    >
+                  </div>
+                </div>
+              </article>
+            </div>
+          </section>
+
+          <!-- =========================
+     BLOQUE “A MEDIDA”
+========================== -->
+          <section class="section">
+            <div class="container">
+              <section class="custom-block card">
+                <!-- Texto -->
+                <div class="custom-content stack-sm">
+                  <h3 class="custom-title">¿Lo querés a medida?</h3>
+
+                  <p class="text-muted max-w-md">
+                    Hacemos cualquier mueble en hierro y madera adaptado a tu
+                    espacio: medidas, color, terminación y estilo.
+                  </p>
+
+                  <div class="flex flex-wrap gap-sm">
+                    <a
+                      class="btn btn-primary"
+                      href="https://wa.me/598XXXXXXXX?text=Hola!%20Quiero%20pedir%20presupuesto%20para%20un%20mueble%20a%20medida."
+                      target="_blank"
+                      rel="noopener"
+                    >
+                      Pedir presupuesto
+                    </a>
+
+                    <a class="btn btn-outline" href="#contacto">
+                      Ver proceso
+                    </a>
+                  </div>
+                </div>
+              </section>
+            </div>
+          </section>
+        </div>
+      </section>
       <!-- =========================
      PROCESO
 ========================== -->
@@ -429,7 +808,7 @@
             </p>
 
             <ul class="contact-list stack-xs">
-              <li><strong>Zona:</strong> Montevideo · Zona Norte</li>
+              <li><strong>Zona:</strong> Montevideo · La Union</li>
               <li><strong>Horario:</strong> L–V · 08:00–18:00</li>
             </ul>
 
@@ -447,15 +826,6 @@
                 Llamar ahora
               </a>
             </div>
-          </div>
-
-          <!-- Imagen / mapa -->
-          <div class="contact-side">
-            <img
-              src="assets/mapa.jpg"
-              alt="Zona de trabajo"
-              class="contact-image"
-            />
           </div>
         </div>
       </section>
