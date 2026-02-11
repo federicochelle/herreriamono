@@ -208,3 +208,21 @@
     font-size: 1.8rem;
   }
 }
+
+/* =========================
+   PRODUCT ROW – MOBILE FIX
+========================= */
+
+@media (max-width: 768px) {
+  .product-row {
+    margin-bottom: 1.5rem; /* menos separación entre filas */
+  }
+
+  .product-row.stack-sm {
+    gap: 0.75rem; /* reduce el espacio interno del stack */
+  }
+
+  .row-head {
+    margin-bottom: 0.5rem;
+  }
+}
