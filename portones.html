@@ -1,0 +1,325 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Portones a medida | Herrería</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <meta
+      name="description"
+      content="Rejas a medida con fabricación e instalación profesional. Pedí presupuesto por WhatsApp."
+    />
+
+    <!-- Tu librería -->
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/pagerejas.css" />
+  </head>
+
+  <body>
+    <!-- Header -->
+    <header class="site-header">
+      <div class="container flex flex-between flex-wrap header-inner">
+        <!-- Brand -->
+        <a
+          class="brand brand-logo-only brand-with-text"
+          href="#top"
+          aria-label="Herrería Mono García"
+        >
+          <img
+            class="brand-logo"
+            src="assets/logo.png"
+            alt="Herrería Mono García"
+            width="44"
+            height="44"
+            loading="eager"
+          />
+
+          <span class="brand-text">
+            <small class="brand-kicker">HERRERÍA</small>
+            <strong class="brand-name">Mono García</strong>
+          </span>
+        </a>
+        <!-- Nav desktop -->
+        <nav class="nav nav-desktop" aria-label="Navegación principal">
+          <a class="nav-link" href="index.html">Inicio</a>
+          <a class="nav-link" href="rejas.html">Rejas</a>
+          <a class="nav-link" href="portones.html">Portones</a>
+          <a class="nav-link" href="estructuras.html">Estructuras</a>
+          <a class="nav-link" href="comercios.html">Comercios</a>
+
+          <!-- CTA principal -->
+          <a
+            class="btn btn-primary nav-cta"
+            href="https://wa.me/598XXXXXXXX?text=Hola!%20Vi%20sus%20trabajos%20en%20la%20web%20y%20quiero%20cotizar%20un%20trabajo%20en%20hierro."
+            target="_blank"
+            rel="noopener"
+          >
+            Consultar por WhatsApp
+          </a>
+
+          <!-- Link secundario (Instagram) -->
+          <a
+            class="btn btn-outline"
+            href="https://www.instagram.com/TU_INSTAGRAM/"
+            target="_blank"
+            rel="noopener"
+            aria-label="Instagram de Herrería"
+            title="Instagram"
+          >
+            <svg
+              class="btn-icon"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.25"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+              <path
+                d="M4 8a4 4 0 0 1 4 -4h8a4 4 0 0 1 4 4v8a4 4 0 0 1 -4 4h-8a4 4 0 0 1 -4 -4l0 -8"
+              />
+              <path d="M9 12a3 3 0 1 0 6 0a3 3 0 0 0 -6 0" />
+              <path d="M16.5 7.5v.01" />
+            </svg>
+            Instagram
+          </a>
+        </nav>
+
+        <!-- Botón hamburguesa (mobile) -->
+        <button
+          class="nav-toggle"
+          type="button"
+          aria-label="Abrir menú"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+        >
+          <span class="nav-toggle-lines" aria-hidden="true"></span>
+        </button>
+      </div>
+
+      <!-- Overlay (mobile) -->
+      <div class="menu-overlay" data-menu-close hidden></div>
+
+      <!-- Menú mobile -->
+      <div class="mobile-menu" id="mobile-menu" hidden>
+        <nav class="nav nav-mobile" aria-label="Menú móvil">
+         <a class="nav-link" href="index.html">Inicio</a>
+          <a class="nav-link" href="rejas.html">Rejas</a>
+          <a class="nav-link" href="portones.html">Portones</a>
+          <a class="nav-link" href="estructuras.html">Estructuras</a>
+          <a class="nav-link" href="comercios.html">Comercios</a>
+
+          <a class="nav-link" href="#muebles" data-menu-close>Muebles</a>
+
+          <a
+            class="btn btn-primary"
+            href="https://wa.me/598XXXXXXXX?text=Hola!%20Vi%20sus%20trabajos%20en%20la%20web%20y%20quiero%20cotizar%20un%20trabajo%20en%20hierro."
+            target="_blank"
+            rel="noopener"
+            data-menu-close
+          >
+            Consultar por WhatsApp
+          </a>
+
+          <a
+            class="btn btn-outline"
+            href="https://www.instagram.com/TU_INSTAGRAM/"
+            target="_blank"
+            rel="noopener"
+            data-menu-close
+          >
+            <svg
+              class="btn-icon"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.25"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+              <path
+                d="M4 8a4 4 0 0 1 4 -4h8a4 4 0 0 1 4 4v8a4 4 0 0 1 -4 4h-8a4 4 0 0 1 -4 -4l0 -8"
+              />
+              <path d="M9 12a3 3 0 1 0 6 0a3 3 0 0 0 -6 0" />
+              <path d="M16.5 7.5v.01" />
+            </svg>
+            Instagram
+          </a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="top" class="page">
+      <!-- HERO CATEGORÍA -->
+      <section class="section section--divided">
+        <div class="container stack-md">
+          <header class="stack-sm">
+            <p class="badge">Categoría</p>
+            <h1 class="section-title">Portones a medida</h1>
+            <p class="text-muted max-w-md">
+              Portones corredizos, batientes y automatizados. Seguridad,
+              resistencia y terminación prolija.
+            </p>
+          </header>
+        </div>
+      </section>
+
+      <!-- GALERÍA -->
+      <section class="section section--divided" id="galeria">
+        <div class="container stack-md">
+          <!-- Grid de imágenes -->
+          <div class="grid grid-3 gallery-grid">
+            <!-- Repetí estos items (7–10) cambiando src/alt -->
+            <button
+              class="card gallery-item"
+              type="button"
+              data-full="/assets/rejas/01.jpg"
+              aria-label="Abrir imagen 1 en grande"
+            >
+              <img
+                src="/assets/rejas/01-thumb.jpg"
+                alt="Reja en ventana - trabajo en hierro"
+                loading="lazy"
+              />
+            </button>
+            <button
+              class="card gallery-item"
+              type="button"
+              data-full="/assets/rejas/01.jpg"
+              aria-label="Abrir imagen 1 en grande"
+            >
+              <img
+                src="/assets/rejas/01-thumb.jpg"
+                alt="Reja en ventana - trabajo en hierro"
+                loading="lazy"
+              />
+            </button>
+            <button
+              class="card gallery-item"
+              type="button"
+              data-full="/assets/rejas/01.jpg"
+              aria-label="Abrir imagen 1 en grande"
+            >
+              <img
+                src="/assets/rejas/01-thumb.jpg"
+                alt="Reja en ventana - trabajo en hierro"
+                loading="lazy"
+              />
+            </button>
+            <button
+              class="card gallery-item"
+              type="button"
+              data-full="/assets/rejas/01.jpg"
+              aria-label="Abrir imagen 1 en grande"
+            >
+              <img
+                src="/assets/rejas/01-thumb.jpg"
+                alt="Reja en ventana - trabajo en hierro"
+                loading="lazy"
+              />
+            </button>
+            <button
+              class="card gallery-item"
+              type="button"
+              data-full="/assets/rejas/02.jpg"
+              aria-label="Abrir imagen 2 en grande"
+            >
+              <img
+                src="/assets/reja.jpg"
+                alt="Reja de frente - terminación prolija"
+                loading="lazy"
+              />
+            </button>
+            <button
+              class="card gallery-item"
+              type="button"
+              data-full="/assets/rejas/01.jpg"
+              aria-label="Abrir imagen 1 en grande"
+            >
+              <img
+                src="/assets/rejas/01-thumb.jpg"
+                alt="Reja en ventana - trabajo en hierro"
+                loading="lazy"
+              />
+            </button>
+            <button
+              class="card gallery-item"
+              type="button"
+              data-full="/assets/rejas/01.jpg"
+              aria-label="Abrir imagen 1 en grande"
+            >
+              <img
+                src="/assets/rejas/01-thumb.jpg"
+                alt="Reja en ventana - trabajo en hierro"
+                loading="lazy"
+              />
+            </button>
+            <button
+              class="card gallery-item"
+              type="button"
+              data-full="/assets/rejas/03.jpg"
+              aria-label="Abrir imagen 3 en grande"
+            >
+              <img
+                src="/assets/rejas/03-thumb.jpg"
+                alt="Rejas a medida - detalle de soldadura"
+                loading="lazy"
+              />
+            </button>
+
+            <!-- ...más items -->
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA FINAL -->
+      <section class="section section--divided">
+        <div class="container stack-md">
+          <div class="card stack-md text-center">
+            <h2>¿Querés algo similar?</h2>
+            <p class="text-muted max-w-md" style="margin-inline: auto">
+              Contanos qué necesitás y te pasamos presupuesto sin compromiso.
+            </p>
+            <div class="stack-xs" style="margin-inline: auto">
+              <a class="btn btn-primary" href="https://wa.me/598XXXXXXXX">
+                Pedir presupuesto por WhatsApp
+              </a>
+              <a class="btn btn-ghost" href="/index.html"> Volver al inicio </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- MODAL -->
+    <div class="modal" id="imgModal" hidden>
+      <div class="modal-overlay" data-close></div>
+
+      <div class="modal-panel">
+        <button class="modal-close" type="button" data-close>✕</button>
+
+        <img id="modalImg" src="" alt="" />
+
+        <div class="modal-content">
+          <p id="modalLine1"></p>
+          <p id="modalLine2"></p>
+          <p id="modalLine3"></p>
+        </div>
+      </div>
+    </div>
+    <script src="js/modal.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>

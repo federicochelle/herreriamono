@@ -372,3 +372,60 @@ svg {
     bottom: 3rem;
   }
 }
+
+/* =====================================================
+   MODAL (Imagen + 3 frases)
+===================================================== */
+
+.modal {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+}
+
+.modal[hidden] {
+  display: none;
+}
+
+.modal-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.75);
+}
+
+.modal-panel {
+  position: relative;
+  max-width: 900px;
+  width: 90%;
+  margin: 5vh auto;
+  background: #111;
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+.modal-panel img {
+  width: 100%;
+
+  display: block;
+  border-radius: 6px;
+}
+
+.modal-content {
+  margin-top: 1rem;
+  color: #fff;
+  display: grid;
+  gap: 0.5rem;
+}
+
+.modal-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: var(--color-surface);
+  color: #000000;
+  border: none;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  cursor: pointer;
+}
